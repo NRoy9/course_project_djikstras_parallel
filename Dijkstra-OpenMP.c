@@ -8,7 +8,7 @@
 #include <time.h>
 #include <math.h>
 #include <omp.h>
-
+#include <conio.h>
 
 #define INT_MAX 100000
 #define TRUE    1
