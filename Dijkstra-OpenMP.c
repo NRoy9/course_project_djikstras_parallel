@@ -38,10 +38,12 @@ typedef struct
 //Prints the array
 void printArray(int *array)
 {
-	int i;
+	int i; int j=0; int k=0;
 	for(i = 0; i < V; i++)
 	{
 		printf("Path to Vertex %d is %d\n", i, array[i]);
+		j++;
+		k=k+i;
 	}
 }
 
