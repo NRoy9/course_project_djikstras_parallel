@@ -68,6 +68,7 @@ void DijkstraOMP(Vertex *vertices, Edge *edges, int *weights, Vertex *root)
 	
 	for(i = 0; i < V;i++)
 	{
+		cout << i;
 
 		if(vertices[i].title != root->title)
 		{
