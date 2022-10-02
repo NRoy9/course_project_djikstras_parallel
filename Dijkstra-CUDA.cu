@@ -11,9 +11,9 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 
-#define V 8
-#define E 11
-#define MAX_WEIGHT 1000000
+#define V 2
+#define E 4
+#define MAX_WEIGHT 100
 #define TRUE    1
 #define FALSE   0
 
@@ -79,7 +79,7 @@ __global__ void Find_Vertex(Vertex *vertices, Edge *edges, int *weights, int *le
 			if(weight < MAX_WEIGHT)
 			{	
 				//If the weight is shorter than the current weight, replace it
-				if(updateLength[v] > length[u] + weight)
+				if(updateLength[v] >= length[u] + weight)
 				{
 					updateLength[v] = length[u] + weight;
 				}
@@ -167,7 +167,7 @@ int main(void)
 
 	
 	//----------------------------------Graph Base Test-------------------------------------//
-	Edge ed[E] = {{0, 4}, {0, 6}, {0,2}, {4,6}, {4,7}, {0, 7}, {7, 3}, {3, 1}, {2,5}, {2, 1}, {5,3}};
+	Edge ed[E] = {{0, 3}, {0, 6}, {0,2}, {2,6}, {3,7}, {0, 7}, {7, 3}, {3, 1}, {2,5}, {2, 1}, {5,3}};
 		int w[E] = {10, 90, 30, 20, 20, 50, 10, 20, 10, 10, 10};
 
 	int i = 0;
