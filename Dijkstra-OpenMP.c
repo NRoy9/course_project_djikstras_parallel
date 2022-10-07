@@ -10,11 +10,11 @@
 #include <omp.h>
 #include <conio.h>
 
-#define INT_MAX 100000
+#define INT_MAX 1000
 #define TRUE    1
 #define FALSE   0
-#define V 8
-#define E 11
+#define V 3
+#define E 8
 
 //boolean type
 typedef int bool;
